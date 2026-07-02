@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Code-Tino</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="images/Untitled-3.png" sizes="512x512" type="image/png">
+	<head>
+  <!-- Basic Open Graph -->
+  <meta property="og:title" content="Code-Tino - Web Design & Projects">
+  <meta property="og:description" content="Explore Tinotenda's portfolio, tutorials, and creative coding projects.">
+  <meta property="og:image" content="images/OpenGraphImage.png">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+
+  <!-- Optional: Twitter Card -->
+  <meta name="twitter:card" content="Code-Ti">
+  <meta name="twitter:title" content="Code-Tino - Web Design & Projects">
+  <meta name="twitter:description" content="Explore Tinotenda's portfolio, tutorials, and creative coding projects.">
+  <meta name="twitter:image" content="images/OpenGraphImage.png">
+</head>
+
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Code-Tino</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#one">About us</a></li>
+						<li><a href="#two">Support Us</a></li>
+						<li><a href="#products">Windows Games and Tools</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+				
+				
+			</header>
+
+			
+			
+
+			<!-- Greeting Popup -->
+<div id="greeting-popup">
+  <div class="popup-content">
+    <span id="greeting"></span><br>
+    <span id="current-time"></span>
+  </div>
+</div>
+
+<style>
+  /* Popup overlay */
+  #greeting-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Popup box */
+  .popup-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+  }
+
+  /* Greeting text */
+  #greeting {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0078D7;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Current time text */
+  #current-time {
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<script>
+  function getGreeting() {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+      return "🌅 Good Morning, welcome to Code‑Tino!";
+    } else if (hour < 18) {
+      return "☀️ Good Afternoon, welcome to Code‑Tino!";
+    } else {
+      return "🌙 Good Evening, welcome to Code‑Tino!";
+    }
+  }
+
+  function getCurrentTime() {
+    const now = new Date();
+    return "🕒 Current time: " + now.toLocaleTimeString();
+  }
+
+  // Show greeting and time
+  document.getElementById("greeting").textContent = getGreeting();
+  document.getElementById("current-time").textContent = getCurrentTime();
+
+  // Auto-hide popup after 2 seconds
+  setTimeout(() => {
+    document.getElementById("greeting-popup").style.display = "none";
+  }, 5000);
+</script>
+
+
+<!-- Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="images/Help Me Faith.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  // Try to play immediately
+  music.play().catch(() => {
+    // If blocked, wait for first user interaction
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+</script>
+
+<style>
+  /* Hide audio controls */
+  #bg-music {
+    display: none;
+  }
+</style>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>Code-Tino</h2>
+
+						
+					</header>
+					
+					<p><strong>Click the Arrow and relax — you re about to download apps and movies that are actually worth your time (and your data) </strong></p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>We’re glad you stopped by!</h2>
+					</header>
+					<p>
+At Code‑Tino, we make it easy to download the software, apps, and movies you love — all in one safe and reliable place.</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Donate</h2>
+					</header>
+					<p><ul><li><!-- USSD Dial Button -->
+<a href="tel:*151*1*1*077949668#" class="ussd-btn">Buy Tino Coffee Using Ecocash</a>
+
+<a href="tel:+263779496684#" class="ussd-btn">Click to call</a>
+
+<style>
+  .ussd-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3dd700; /* Blue button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+	margin: 10px;
+  }
+  .ussd-btn:hover {
+    background-color: #bbff00;
+	padding: 13px 25px;
+	border-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .ussd-btn:active{
+	background-color: #ff4800;
+	padding: 13px 25px;
+  }
+  .ussd-btn:visited{
+	background-color: #7700ff;
+  }
+</style>
+
+</li>
+
+</ul></p>
+<p>Help us grow! Your donation will go directly toward buying a domain name and funding research to improve our software and movie downloads.</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+			
+			<section id="products">
+  <h2>Windows Games and Tools</h2>
+  <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <button onclick="searchSite()" style="display: block;      
+  margin: 20px auto;   
+  padding: 10px 10px px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}">Search</button>
+</div>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://a.fsdn.com/allura/p/qbittorrent/icon?1724097660?&w=120" alt="Product 1">
+      <h3>QBITTORRENT</h3>
+      <p>Download Me to download </p>
+     <a href="https://yer.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe?viasf=1&fid=db1f86d7ef6cffc5"> <button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/Untitled-3.png" alt="Product 2">
+      <h3>Grand Theft Auto V</h3>
+      <p>Video Game</p>
+      <a href="magnet:?xt=urn:btih:1D65688E2B898163EA2959D06CFEFD41320B8C3B&dn=GTA%20V%20-%20Grand%20Theft%20Auto%20V%20-%20Rjaa&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/adobe-audition-2025.jpg" alt="Product 3">
+      <h3>Adobe Audition 2025</h3>
+      <p>Audio Editing </p>
+      <a href="magnet:?xt=urn:btih:35FECBAA0D219CD4180EE22F96CFACA4E5E46157&dn=Adobe%20Audition%202026%20v26.3%20(x64)%20FINAL%20Pre-Activated%20%5BAppDoze%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"> <button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/after-effect.jpg" alt="Product 4">
+      <h3>After Effects</h3>
+      <p>Video Editing</p>
+      <a href="magnet:?xt=urn:btih:247F037A5628E7D82A9D49BBF37F5896BCBA204C&dn=Adobe%20After%20Effects%202022%20v22.2.1.3%20(x64)%20%5B2022%2C%20MULTI%5D%20-%20Rjaa&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/br-11134207-7r98o-lowiy84wsk9145.jpg" alt="Product 1">
+      <h3>Photoshop 2023</h3>
+      <p>Image Editing</p>
+     <a href="magnet:?xt=urn:btih:BCD3F845E94C42C67730673947358B80470F3533&dn=Adobe%20Photoshop%202023%2024.2.0.315%20(x64)%20%2B%20Crack%20%5BTheWindowsForum%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337" ><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/typing master2.jpg" alt="Product 2">
+      <h3>Typing Master 2023</h3>
+      <p>Typing Tutor</p>
+     <a href="https://www.typingmaster.com/TypingMaster12.exe"> <button>Download</button></a>
+	</div>
+
+    <div class="product-card">
+      <img src="images/products/Untitled-3.jpg" alt="Product 3">
+      <h3>Smadav Pro</h3>
+      <p>Antivirus Software</p>
+      <a href="magnet:?xt=urn:btih:57BB550881B2069050B9076B8B9B97476C00554C&dn=SMADAV%20Pro%202026%20v15.8.2%20Multilingual%20Pre-Activated%20%5BFTUApps%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/Untitled-3.png" alt="Product 4">
+      <h3>Filmora 14</h3>
+      <p>Video Editing</p>
+      <a href="magnet:?xt=urn:btih:A70519C61FA6C04B976D6810F1C99381BEACFA56&dn=Wondershare%20Filmora%2014.9.3.14445%20(x64)%20FINAL%20%2B%20Crack%20%5BAppDoze%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+	<div class="product-card">
+      <img src="images/products/1200x630-bandicam-pack.png" alt="Product 1">
+      <h3>Bandicam</h3>
+      <p>Screen Recorder</p>
+      <a href="https://dl.bandicam.com/bdcamsetup.exe"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/image-line-fl-studio-11-fruity-edition-loop-generator-boxed-version-p6021-13616_medium.jpg" alt="Product 2">
+      <h3>Fl studio 2025</h3>
+      <p>Making Music</p>
+      <a href="magnet:?xt=urn:btih:C42C380D79406A44CF63074B3F5552803767B699&dn=FL%20Studio%20Producer%20Edition%2025.1.6.4997%20All%20Plugins%20Edition%20FINAL%20%2B%20Crack%20AppDoze&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/mediamodifier_image-3-e1669735430822.png" width="160" alt="Product 3">
+      <h3>IDM</h3>
+      <p>worse than malaria</p>
+      <a href="magnet:?xt=urn:btih:1DD887DB814138ABC3E968DE8F445ADF22800E73&dn=Internet%20Download%20Manager%20IDM%20v6.43.1%20%2B%20Crack%20(Lifetime%20Activation)%20%5BAppDoze%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/stager.jpg" alt="Product 4">
+      <h3>Substance 3d Stager</h3>
+      <p>3D Modeling</p>
+      <a href="magnet:?xt=urn:btih:9EA3D253E45A87E78445100386FE53D3DF2E33B5&dn=Adobe%20Substance%203D%20Stager%20v3.1.6%20(x64)%20Pre-Activated%20-%20%5BhaxNode%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	</div>
+<h2 style="margin-top:16px">PC games</h2>
+	<div class="product-grid">
+	<div class="product-card">
+      <img src="images/products/android torrent.webp" alt="Product 1">
+      <h3>Utorrent</h3>
+      <p style="color:red">Download Me! for Android</p>
+      <a href="https://play.google.com/store/apps/details?id=com.utorrent.client" target="_blank"><button style="background-color: #7700ff;">Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/gta sa.jpg" alt="Product 2">
+      <h3>GTA S.A</h3>
+      <p>Video Game</p>
+      <a href="magnet:?xt=urn:btih:E15EEF1BCF209B71ACF273D89B619910AD423699&dn=GTA%20San%20Andreas%20v1.0%20%5BBuild%20459558%5D%20Repack%20Team-LiL&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+	</div>
+
+    <div class="product-card">
+      <img src="images/products/pc games/far cry 2.jpg" alt="Product 3">
+      <h3>Far Cry 2</h3>
+      <p>Video Game</p>
+     <a href="magnet:?xt=urn:btih:C7153DC3F632C4CD7E5B681E3C8437A5C7C55727&dn=Far%20Cry%202%3A%20Fortune%27s%20Edition%20(GOG)&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/pc games/far cry 3.jpg" alt="Product 4">
+      <h3>Far Cry 3</h3>
+      <p>Video Game</p>
+      <a href="magnet:?xt=urn:btih:E414A6113FF419B4A986AA218C6A29E176097280&dn=Far.Cry.3.Complete.Collection.MULTI-ELAMIGOS&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+
+	<div class="product-card">
+      <img src="images/products/pc games/far cry 4.jpg" alt="Product 1">
+      <h3>Far Cry 4</h3>
+      <p>Video Game</p>
+     <a href="magnet:?xt=urn:btih:14C15A85FFD34A1609A866FB734F7B6EAEB9F0E6&dn=Far%20Cry%204%20Gold%20Edition%202014%20RePack%20MULTi2-SGAMES&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"> <button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/pc games/far cry 5.jpg" alt="Product 2">
+      <h3>Far Cry 5</h3>
+      <p>Video Game</p>
+      <a href="magnet:?xt=urn:btih:321532358DDBE8F7F6716EB0EAAB93FEAA950AA7&dn=Far.Cry.5.Gold.Edition.MULTI-ELAMIGOS&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/pc games/far cry 6.jpg" alt="Product 3">
+      <h3>Far Cry 6</h3>
+      <p>Video Game</p>
+      <button><a href="magnet:?xt=urn:btih:737D9CDE3CABA7FA44253BA39B5FF4095DB653B6&dn=Far.Cry.6-EMPRESS&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337">Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/pc games/watch dogs.jpg" alt="Product 4">
+      <h3>Watch Dogs 2</h3>
+      <p>Video Game</p>
+      <a href="magnet:?xt=urn:btih:A246030E816BC19C2D2326DCF81DF26D1E6A7DB1&dn=Watch%20Dogs%202-CPY&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	</div>
+
+
+<h2 style="margin-top:16px">Movies and Series</h2>
+	<div class="product-grid">
+	<div class="product-card">
+      <img src="images/products/ms/battleship.jpg" alt="Product 1">
+      <h3>Battleship</h3>
+      <p>Movie Sci-fi</p>
+     <a href="magnet:?xt=urn:btih:46820F05C9E4372DE6426BDF3DC089DFFA1831EB&dn=Battleship%20(2012)%201080p%20BrRip%20x264%20-%202GB%20-%20YIFY%20&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/ms/from s1.jpg" alt="Product 2">
+      <h3>From S1</h3>
+      <p>Series Horror</p>
+      <a href="magnet:?xt=urn:btih:4B2239B808393A1DF17492D9243B4E55AAD3AC26&dn=From%20(2022)%20Season%201%20S01%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/ms/from.jpg" alt="Product 3">
+      <h3>From S2</h3>
+      <p>Series Horror</p>
+      <a href="magnet:?xt=urn:btih:6693F3E4D2FF3B47B51877B845ECD457DB7EB574&dn=From%20(2022)%20Season%202%20S02%20(1080p%20AMZN%20WEB-DL%20x265%20HEVC%2010bit%20EAC3%205.1%20t3nzin)&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+	<div class="product-card">
+      <img src="images/products/ms/hannibal.jpg" alt="Product 4">
+      <h3>Hannibal</h3>
+      <p>Series Horror</p>
+      <a href="magnet:?xt=urn:btih:19155A8526C9BC2194189ADE2DA774F2202A8E27&dn=Hannibal%202013%20Season%201%20Complete%20720p%20BluRay%20x264%20%5Bi_c%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+
+
+	<div class="product-card">
+      <img src="images/products/ms/no time to die.jpg" alt="Product 1">
+      <h3>No Time to Die</h3>
+      <p>Movie Action</p>
+      <a href="magnet:?xt=urn:btih:7AFDA1281813267234B00AA5DE611867C23CB18D&dn=No.Time.To.Die.2021.1080p.AMZN.WEBRip.1600MB.DD5.1.x264-GalaxyRG&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/ms/prison break.jpg" alt="Product 2">
+      <h3>Prison Break S1</h3>
+      <p>Series</p>
+      <a href="magnet:?xt=urn:btih:73E801A3C2CD8A8CA9A55CB8BE3DCA37D441CD1C&dn=Prison%20Break%202005%20Season%201%20Complete%20720p%20AMZN%20WEB-DL%20x264%20%5Bi_c%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/ms/raising dion.jpg" alt="Product 3">
+      <h3>Raising Dion</h3>
+      <p>Movie</p>
+      <a href="https://dl.bandicam.com/bdcamsetup.exe"><button>Download</button></a>
+    </div>
+
+	<div class="product-card">
+      <img src="images/products/ms/saw collection.jpg" alt="Product 4">
+      <h3>Saw part 1</h3>
+      <p>Horro</p>
+      <a href="magnet:?xt=urn:btih:44F00C2C38EA5B629A869B5BE40D7AC54A4BB700&dn=Saw%20UNRATED%20(2004)%201080p%20BrRip%20x264%20-%20YIFY&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+	<div class="product-card">
+      <img src="images/products/ms/way ward pines.jpg" alt="Product 1">
+      <h3 class="wayward-pines">Wayward Pines</h3>
+      <p>Series</p>
+      <a href="magnet:?xt=urn:btih:418AC1BEC728A6E3ADA7745550D86773C73650E5&dn=Wayward%20Pines%20-%20Season%201%20-%20720p%20WEB-HD%20-%20x265%20HEVC%20-%20ShAaNiG&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+    <div class="product-card">
+      <img src="images/products/ms/stranger things.jpg" alt="Product 2">
+      <h3>Stranger Things</h3>
+      <p>Series</p>
+      <a href="magnet:?xt=urn:btih:8625C011D0FB4267A2D87EE0A8EFBE1E8285FF99&dn=Stranger%20Things%20(2016)%20S01%20(1080p.BluRay.X265%20HEVC.10bit%20AAC%205.1&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+    <div class="product-card">
+      <img src="images/products/ms/the last of us.jpg" alt="Product 3">
+      <h3>The Last of Us</h3>
+      <p>Series</p>
+      <a href="magnet:?xt=urn:btih:9075B6D6C8D1D18DE8B65FDC4E2BF9AF7BEC8CD8&dn=The%20Last%20Of%20Us%20-%20Season%201%20-%20Mp4%20x264%20AC3%201080p&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+	<div class="product-card">
+      <img src="images/products/ms/Untitled-4.jpg" alt="Product 4">
+      <h3>Lucifer S01</h3>
+      <p>Series</p>
+      <a href="magnet:?xt=urn:btih:3E53104843B949665F82F276D7C643B4C8E152C6&dn=Lucifer.S01.COMPLETE.720p.BluRay.x264-GalaxyTV&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337"><button>Download</button></a>
+    </div>
+
+
+
+	
+  </div>
+
+
+
+
+
+
+
+
+		>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Hello World from Tino</h2>
+						<p>At Code‑Tino, we make it simple to get the movies, apps, software, or games you need. Just fill in the form below, and we’ll assist you right away.</p>
+					</header>
+					<form id="registerForm">
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="text" id="phone" placeholder="Phone Number" required>
+  <textarea id="message" placeholder="Your Message (optional)" rows="4"></textarea>
+  <button type="submit">Send to WhatsApp</button>
+</form>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(event){
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  // Your WhatsApp number in international format
+  let myNumber = "27632584023";
+
+  let fullMessage = "Code-Tino Client Details:\n"
+                  + "Name: " + name + "\n"
+                  + "Email: " + email + "\n"
+                  + "Phone: " + phone + "\n"
+                  + "Message: " + message;
+
+  let whatsappLink = "https://wa.me/" + myNumber + "?text=" + encodeURIComponent(fullMessage);
+
+  window.open(whatsappLink, "_blank");
+});
+</script>
+
+				</div>
+			</section>
+
+
+			
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="https://x.com/TinotendaM58" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/tmachinjike/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/in/tinotenda-machinjike-a90047371/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				
+						<li><a href="https://pin.it/6g7G4IJN2" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Tino Web</li><li>Developed by: <a href="https://wa.me/<+277632584023>?text=Hello%20I%20saw%20your%20website">Tinotenda Machinjike</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script>
+function searchSite() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.product-grid .product-card');
+
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(input) ? '' : 'none';
+  });
+}
+</script>
+
+	</body>
+	
+<a href="https://wa.me/27632584023" target="_blank" id="whatsapp-float">
+  <img src="images/whatsapp logo.png" alt="WhatsApp" />
+</a>
+
+<style>
+#whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+#whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+#whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+
+
+
+
+</html>
